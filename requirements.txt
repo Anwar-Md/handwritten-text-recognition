@@ -11,14 +11,12 @@ langchain-core
 langchain-community
 
 opencv-python
+opencv-python-headless
 fpdf
 tensorflow
 tf-keras
 language-tool-python
-shutil
-collections
-dataclasses
-typing
 pdf2image
 scikit-learn
-
+pypdf
+faiss-cpu

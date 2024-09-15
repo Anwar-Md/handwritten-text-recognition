@@ -20,4 +20,3 @@ pdf2image
 scikit-learn
 pypdf
 faiss-cpu
-java

@@ -20,8 +20,8 @@ from files.css import CSS
 
 # Load environment variables from .env file
 load_dotenv()
-os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
-groq_api_key = os.getenv('GROQ_API_KEY')
+os.environ['OPENAI_API_KEY'] = str(os.getenv("OPENAI_API_KEY"))
+groq_api_key = str(os.getenv('GROQ_API_KEY'))
 
 # Inject CSS
 st.markdown(CSS, unsafe_allow_html=True)

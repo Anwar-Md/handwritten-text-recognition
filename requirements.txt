@@ -10,8 +10,6 @@ langchain-openai
 langchain-core
 langchain-community
 
-opencv-python
-opencv-python-headless
 fpdf
 tensorflow
 tf-keras

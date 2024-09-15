@@ -1,6 +1,7 @@
 streamlit
 numpy
 pillow
+opencv-python
 
 SpeechRecognition
 load-dotenv

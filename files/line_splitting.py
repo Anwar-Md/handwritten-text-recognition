@@ -85,7 +85,7 @@ def process_pdf(pdf_path: str):
         img = np.array(image.convert('RGB'))
         img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-        detections = detect_lines(img, kernel_size=25, sigma=11, theta=7, min_area=300)
+        detections = detect_lines(img, kernel_size=3, sigma=11, theta=7, min_area=50)
         lines = sort_multiline(detections)
         for line_idx, line in enumerate(lines):
             x_min = min(det.bbox.x for det in line)

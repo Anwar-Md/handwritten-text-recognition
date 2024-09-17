@@ -20,6 +20,7 @@ from files.css import CSS
 
 # Load environment variables from .env file
 load_dotenv()
+# os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 groq_api_key = os.getenv('GROQ_API_KEY')
 
 # Inject CSS

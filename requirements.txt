@@ -8,7 +8,7 @@ SpeechRecognition
 load-dotenv
 langchain
 langchain-groq
-langchain-openai
+langchain-google-genai
 langchain-core
 langchain-community
 

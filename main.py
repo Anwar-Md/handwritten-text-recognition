@@ -4,7 +4,7 @@ import streamlit as st
 import speech_recognition as sr
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
-from langchain_openai import OpenAIEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
@@ -20,7 +20,6 @@ from files.css import CSS
 
 # Load environment variables from .env file
 load_dotenv()
-os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 groq_api_key = os.getenv('GROQ_API_KEY')
 
 # Inject CSS
@@ -28,7 +27,7 @@ st.markdown(CSS, unsafe_allow_html=True)
 
 # Function to handle vector embedding
 def chatbot():
-    st.session_state.embeddings = OpenAIEmbeddings()
+    st.session_state.embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
     loader = PyPDFDirectoryLoader(OUTPUT_FOLDER)
     docs = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
